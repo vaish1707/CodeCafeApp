@@ -1,0 +1,18 @@
+{
+	"level_result" : [
+		{
+			"level": "Easy",
+			"count": "153"
+		
+		},
+		{
+			"level": "Medium",
+			"count": "123"
+	
+		},
+        {
+			"level": "Hard",
+			"count": "234"
+		}
+	]
+}

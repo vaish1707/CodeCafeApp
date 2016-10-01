@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+    <script src="js/main.js"></script>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body ng-app="codeApp">
+
+
+    <nav>
+        <div class="nav-wrapper navbkgd">
+            <a href="#" class="brand-logo">Code Cafe</a>
+            <!-- <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#">Sass</a></li>
+                <li><a href="#">Components</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>-->
+        </div>
+    </nav>
+    <div class="row container" ng-controller="detailCtrl">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="id_name" type="text" ng-model="id_name" class="validate">
+                    <label for="first_name">ID</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="title" type="text" class="validate">
+                    <label for="title">Title</label>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">code</i>
+
+                    <textarea id="codeid" class="materialize-textarea"></textarea>
+                    <label for="codeid" class="">Code Here</label>
+                </div>
+            </div>
+
+
+            <label class="spacing letterwidth">Rating</label>
+            <p>
+                <input name="radioName" type="radio" id="test1" class="with-gap" />
+                <label for="test1">1</label>
+            </p>
+            <p>
+                <input name="radioName" type="radio" id="test2" class="with-gap" />
+                <label for="test2">2</label>
+            </p>
+            <p>
+                <input class="with-gap" name="radioName" type="radio" id="test3" />
+                <label for="test3">3</label>
+            </p>
+            <p>
+                <input name="radioName" type="radio" id="test4" class="with-gap" />
+                <label for="test4">4</label>
+            </p>
+            <p>
+                <input name="radioName" type="radio" id="test5" class="with-gap" />
+                <label for="test4">5</label>
+            </p>
+            <label class="spacing letterwidth bottomspacing">Level</label>
+            <select class="browser-default bottomspacing" id="difficulty">
+                <option value=""  selected>Choose the Level of difficulty</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <label class="spacing letterwidth bottomspacing">CompileStatus</label>
+            <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box" />
+                <label for="filled-in-box">Accepted</label>
+            </p>
+            <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box" />
+                <label for="filled-in-box">Memory/TimeLimitExceeded</label>
+            </p>
+            <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box" />
+                <label for="filled-in-box">WrongAnswer</label>
+            </p>
+            <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box" />
+                <label for="filled-in-box">skipped</label>
+            </p>
+            <p>
+                <input type="checkbox" class="filled-in" id="filled-in-box" />
+                <label for="filled-in-box">Runtime/CompilationError</label>
+            </p>
+            <label class="spacing letterwidth">Language</label>
+            <select class="browser-default" id="language">
+                <option value=""  selected>Choose the programming language</option>
+                <option value="java">JAVA</option>
+                <option value="c#">C#</option>
+                <option value="javascript">JAVASCRIPT</option>
+            </select>
+            <button class="btn waves-effect waves-light spacing" type="submit" name="action" id="submitbutton" ng-click="getDetails()">Submit
+                <i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>

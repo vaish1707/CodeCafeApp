@@ -1,0 +1,49 @@
+{
+	"code_result": [
+		{
+			"language": "C#",
+			"code": "C# code goes here",
+			"title": "Knapsack problem"
+		},
+		{
+			"language": "C#",
+			"code": "C# code goes here",
+			"title": "Sorting Problem"
+		},
+		{
+			"language": "Java",
+			"code": "Java code goes here",
+			"title": "Factorial Problem"
+		},
+		{
+			"language": "Java",
+			"code": "Java code goes here",
+			"title": "LinkedList Problem"
+		},
+		{
+			"language": "Java",
+			"code": "Java code goes here",
+			"title": "Bear and Three Musketeers"
+		},
+		{
+			"language": "Python",
+			"code": "Python code goes here",
+			"title": "Factorial Problem"
+		},
+		{
+			"language": "Python",
+			"code": "Python code goes here",
+			"title": "LinkedList Problem"
+		},
+		{
+			"language": "Angular",
+			"code": "Angular code goes here",
+			"title": "Bear and Three Musketeers"
+		},
+		{
+			"language": "Angular",
+			"code": "Angular code goes here",
+			"title": "Bear and Three Musketeers"
+		}
+	]
+}

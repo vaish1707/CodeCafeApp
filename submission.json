@@ -1,0 +1,18 @@
+{
+	"sub_result" : [
+		{
+			"problem": "Eight Queen Problem",
+			"count": "1423"
+		
+		},
+		{
+			"problem": "Cake Problem",
+			"count": "1353"
+	
+		},
+        {
+			"problem": "Magic Square Problem",
+			"count": "2466"
+		}
+	]
+}

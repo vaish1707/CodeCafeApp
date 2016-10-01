@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="css/custom.css">
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.min.js"></script>
+    <script src="controllers/codeappcontroller.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body ng-app="codeAppmodule">
+    <nav>
+        <div class="nav-wrapper navbkgd">
+            <a href="#" class="brand-logo">Cognizant Cafe Code</a>
+
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col s8">
+                <nav style="margin-top:20px;">
+                    <div class="nav-wrapper searchbk">
+                        <form>
+                            <div class="input-field">
+                                <input id="search" ng-model="searchText" type="search" placeholder="Search(by title,level or language)" required>
+                                <label for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+                <div id="mainContent" ng-controller="codeController">
+                    <div ng-repeat="codevalue in codeValue | filter:searchText">
+                        <h3>{{codevalue.title}}</h3>
+                        <div>
+                            <h5 class="right-align">{{codevalue.language}}</h5>
+                        </div>
+                        <div class="card-panel">
+                            <pre>
+                                <code class="Javascript">
+                           <h4> {{codevalue.code}}<h4>
+                                 </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4">
+                <div id="status" ng-controller="statusController">
+                    <h5 class="center-align">Filter by status</h5>
+                    <div class="card-panel">
+                        <p ng-repeat="status in allStatus">
+                            <input type="checkbox" id="{{status.name}}" ng-model="status.selected" />
+                            <label for="{{status.name}}">{{status.value}}</label>
+                        </p>
+                    </div>
+                </div>
+                <div id="analysis" ng-controller="analysisController">
+                    <h5 class="center-align">Statical Analysis</h5>
+                    <div class="card-panel">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Top 5 languages used</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="codeinfo in analysisValue">
+                                    <td>{{codeinfo.language}}</td>
+                                    <td>{{codeinfo.users_attempted}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Top 3 submission attempted</th>
+                                </tr>
+                            </thead>
+                            <tbody ng-controller="submissionController">
+                                <tr ng-repeat="subValue in submissionValue">
+                                    <td>{{subValue.problem}}</td>
+                                    <td>{{subValue.count}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Number of submission per level</th>
+                                </tr>
+                            </thead>
+                            <tbody ng-controller="levelController">
+                                <tr ng-repeat="levelInfo in levelValues">
+                                    <td>{{levelInfo.level}}</td>
+                                    <td>{{levelInfo.count}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th data-field="id">Total Submission</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Total Submission</td>
+                                    <td>12,321</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    </div>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Here you GO!!</h5>
+                    <p class="grey-text text-lighten-4">A simplified code searching experience</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text"><i class="small material-icons">email</i><a class="grey-text text-lighten-4" href="#!">abirami.vaishnavi@gmail.com</a></h5>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2016 Code Cafe
+
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script>
+   
+        
+    </script>
+</body>
+
+</html>
